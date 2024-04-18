@@ -1,0 +1,23 @@
+{
+	"name": "cassidoo-next",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "npx tinacms dev -c 'astro dev'",
+		"start": "astro dev",
+		"build": "tinacms build && astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/rss": "^4.0.5",
+		"@astrojs/sitemap": "^3.1.2",
+		"astro": "^4.5.18",
+		"tinacms": "^1.6.1"
+	},
+	"devDependencies": {
+		"@tinacms/cli": "^1.5.43",
+		"prettier": "^3.2.5",
+		"prettier-plugin-astro": "^0.13.0"
+	}
+}

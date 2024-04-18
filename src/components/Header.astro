@@ -1,0 +1,58 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../config";
+---
+
+<header>
+	<div class="header-section">
+		<div class="header-frame">
+			<h1>{SITE_TITLE}</h1>
+			<h2>Software Engineer in Chicago</h2>
+		</div>
+		<div class="img-frame">
+			<img id="propic" src="https://cassidoo.co/img/face1.jpg" alt="" />
+		</div>
+	</div>
+</header>
+<nav>
+	<HeaderLink href="/">home</HeaderLink>
+	<HeaderLink href="/newsletter">newsletter</HeaderLink>
+	<HeaderLink href="/blog">blog</HeaderLink>
+	<HeaderLink href="https://github.com/cassidoo">github</HeaderLink>
+	<HeaderLink href="https://twitter.com/cassidoo">twitter</HeaderLink>
+	<!-- <HeaderLink href="https://codepen.io/cassidoo/">codepen</HeaderLink> -->
+	<HeaderLink href="https://linkedin.com/in/cassidoo">linkedin</HeaderLink>
+	<HeaderLink href="https://www.patreon.com/cassidoo">patreon</HeaderLink>
+</nav>
+<style>
+	h2 {
+		margin: 0.5em 0;
+	}
+
+	.header-section {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.header-frame {
+		max-width: 350px;
+	}
+	.img-frame {
+		position: relative;
+		width: 200px;
+		height: 200px;
+		margin: 0 0 10px 0;
+		border-radius: 50%;
+		overflow: hidden;
+	}
+	.img-frame img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		height: 100%;
+	}
+</style>
