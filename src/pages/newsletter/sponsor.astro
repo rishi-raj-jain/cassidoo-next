@@ -1,0 +1,198 @@
+---
+import BaseHead from "@components/BaseHead.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import ColorScript from "@components/ColorScript.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "@src/config";
+---
+
+<!doctype html>
+<html lang="en-us">
+	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+
+	<style>
+		table {
+			margin: 20px auto;
+			border-collapse: collapse;
+		}
+
+		thead tr {
+			border-bottom: 3px solid var(--black);
+		}
+
+		tbody tr:not(:last-child) {
+			border-bottom: 2px solid var(--gray);
+		}
+
+		tr td {
+			padding: 20px;
+		}
+
+		tr td:nth-child(1) {
+			padding-left: 0;
+			font-weight: bold;
+		}
+
+		tr td:nth-child(2) {
+			padding-right: 0;
+			text-align: right;
+		}
+
+		br {
+			display: block;
+			content: "";
+			margin-bottom: 15px;
+		}
+
+		tr td br {
+			margin-bottom: 0;
+		}
+	</style>
+
+	<body>
+		<Header title={"Cassidy Williams"} />
+		<main>
+			<div class="newsletter-blurb">
+				<p>
+					In this <span>weekly newsletter</span> I share what's
+					<span class="blue">new and cool</span> in the world of web development,
+					with content for <span>everyone</span>, from beginners to pros.
+				</p>
+				<p>
+					There's also an
+					<span class="green">interview question of the week</span>, where devs
+					can test their skills and I share the results the following week.
+				</p>
+
+				<p>
+					You can
+					<a href="https://buttondown.email/cassidoo/archive"
+						>view previous issues</a
+					>, and
+					<a href="https://buttondown.email/cassidoo/rss">subscribe via RSS</a>!
+				</p>
+
+				<h3>Newsletter stats</h3>
+
+				<table>
+					<!-- <thead>
+            <tr>
+              <th colspan="2">Stats</th>
+            </tr>
+          </thead> -->
+					<tbody>
+						<tr>
+							<td>
+								Active email subscribers <br />
+								(not including RSS readers)
+							</td>
+							<td>~16,600</td>
+						</tr>
+						<tr>
+							<td>Email open rate</td>
+							<td>~55-65%</td>
+						</tr>
+						<tr>
+							<td>Yearly subscriber retention</td>
+							<td>97%</td>
+						</tr>
+						<tr>
+							<td>Newsletter frequency</td>
+							<td>
+								Once weekly <br />
+								(Sunday evenings/Monday mornings)
+							</td>
+						</tr>
+						<tr>
+							<td>Slots per issue</td>
+							<td>
+								One main slot <br />
+								One interview question slot
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h3>Sponsorship format</h3>
+				<p>
+					For the main sponsorship slot,
+					<span class="green">copy is super flexible</span>. You can use links,
+					bold text, italics, and lists, but not images. I'd suggest
+					<span class="blue">keeping it under 120 words</span> for your own success,
+					but it's up to you.
+				</p>
+
+				<p>
+					For the interview question, each issue includes an "Interview Question
+					of the Week". You can <span>provide the interview question</span>, and
+					a 1-3 sentence short blurb to include at the end of the section. This
+					option may be best for you if you are hiring!
+				</p>
+
+				<p>
+					In addition to every sponsorship slot in the newsletter,
+					<a href="https://twitter.com/cassidoo">I will tweet</a> about your company
+					when the newsletter goes out thanking you for your sponsorship, and that
+					can include your preferred copy and link. You will also be included in
+					the
+					<a href="https://buttondown.email/cassidoo/archive">
+						newsletter archive
+					</a>
+					for the issue! We can also discuss if you'd like to include
+					<a href="https://www.twitch.tv/cassidoo">Twitch</a> sponsorships, or other
+					social media shoutouts as well.
+				</p>
+
+				<h3>Make a booking</h3>
+
+				<p>
+					If this all sounds good to you,
+					<a href="https://cass.run/nss"
+						>you can view available time slots here!</a
+					>
+					If you'd like to book a slot, you can fill out the form below.
+					<strong>Filling out the form doesn't mean commitment</strong>, it's
+					just to get the ball rolling!
+				</p>
+
+				<div class="hubspot">
+					<script
+						charset="utf-8"
+						type="text/javascript"
+						src="//js.hsforms.net/forms/embed/v2.js"></script>
+					<script>
+						hbspt.forms.create({
+							region: "na1",
+							portalId: "410369",
+							formId: "08c85233-9e98-444c-bd54-9e3105511243",
+						});
+					</script>
+				</div>
+
+				<p>
+					(Heads up, make sure your ad blocker is off for this form to submit.
+					I'm using HubSpot for it, which sometimes gets blocked!)
+				</p>
+
+				<p>
+					If you are ready to book and
+					<strong>don't want to talk to a human</strong> (totally get it), you can
+					do
+					<a href="https://promoted.com/index.php?sponsor=cassidoo"
+						>self-serve booking on this page</a
+					>!
+				</p>
+
+				<p>
+					Thank you so much for your consideration and support! If you are
+					<span>not a company</span> and/or would like to support my newsletter in
+					a different way,
+					<a href="https://www.patreon.com/cassidoo">check out my Patreon</a>.
+					Thank you again!
+				</p>
+			</div>
+		</main>
+		<Footer />
+		<ColorScript />
+	</body>
+</html>
