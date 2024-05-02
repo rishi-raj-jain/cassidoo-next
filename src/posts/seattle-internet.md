@@ -6,7 +6,7 @@ description: The internet today reminds me of when I used to live in Seattle.
 tags:
   - personal
   - musings
-added: "Apr 15 2024"
+added: 2024-04-16T00:08:54.561Z
 ---
 
 From the end of 2016 through the first half of 2020, I lived in Seattle. I really liked living there when I did. It was a quirky city (I had moved there after burning out in NYC), and I often called it a "hobbyist" city. Everyone there is _really_ into the things they're into.

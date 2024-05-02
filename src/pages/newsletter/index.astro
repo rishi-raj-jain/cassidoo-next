@@ -1,0 +1,66 @@
+---
+import BaseHead from "@components/BaseHead.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import ColorScript from "@components/ColorScript.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "@src/config";
+---
+
+<!doctype html>
+<html lang="en-us">
+	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	<body>
+		<Header title={"Cassidy Williams"} />
+		<main>
+			<div class="newsletter-blurb">
+				<p>
+					In this <span>weekly newsletter</span> I share with you what's
+					<span class="blue">new and cool</span> in the world of web development,
+					with content for <span>everyone</span>, from beginners to pros.
+				</p>
+				<p>
+					There's also an
+					<span class="green">interview question of the week</span>, where you
+					can test your skills and I share the results the following week.
+				</p>
+				<p>
+					I also send you <span>jokes</span> and
+					<span class="yellow">stories</span>.
+				</p>
+				<p>
+					And pics of <span class="blue">mechanical keyboards</span>.
+				</p>
+				<p>
+					I won't spam though, <span class="green">I promise</span>.
+				</p>
+
+				<div class="issue-links">
+					<a href="https://buttondown.email/cassidoo/archive"
+						>View the archive</a
+					>
+					-
+					<a href="https://buttondown.email/cassidoo/rss">Subscribe via RSS</a>
+				</div>
+			</div>
+
+			<div>
+				<iframe
+					scrolling="no"
+					style="
+						width: 100% !important;
+						height: 220px;
+						border: 1px #96979c solid !important;
+					"
+					src="https://buttondown.email/cassidoo?as_embed=true"></iframe>
+			</div>
+			<div class="sneaky-sponsor">
+				Want to sponsor this newsletter?
+				<a href="https://cassidoo.co/newsletter/sponsor.html">Learn more here</a
+				>!
+			</div>
+			<br />
+		</main>
+		<Footer />
+		<ColorScript />
+	</body>
+</html>

@@ -1,9 +1,9 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import ColorScript from "../components/ColorScript.astro";
-import Tags from "../components/Tags.astro";
+import BaseHead from "@components/BaseHead.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import ColorScript from "@components/ColorScript.astro";
+import Tags from "@components/Tags.astro";
 import getTags from "../scripts/getTags";
 
 const posts = await Astro.glob("../posts/*.md");
@@ -13,24 +13,18 @@ let {
 	content: { title, description, added, updated, tags, heroImage },
 } = Astro.props;
 
-added = new Date(added).toLocaleDateString(
-	"en-us",
-	{
+added = new Date(added).toLocaleDateString("en-us", {
+	year: "numeric",
+	month: "short",
+	day: "numeric",
+});
+
+if (updated) {
+	updated = new Date(updated).toLocaleDateString("en-us", {
 		year: "numeric",
 		month: "short",
 		day: "numeric",
-	}
-);
-
-if (updated) {
-	updated = new Date(updated).toLocaleDateString(
-		"en-us",
-		{
-			year: "numeric",
-			month: "short",
-			day: "numeric",
-		}
-	);
+	});
 }
 ---
 
@@ -43,10 +37,14 @@ if (updated) {
 			<article>
 				{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
 				<h1 class="article-title">{title}</h1>
-				{updated ?
-					<span><time>{added}</time>, last updated on <time>{updated}</time></span>
-					:
-					<span>{added && <time>{added}</time>}</span>
+				{
+					updated ? (
+						<span>
+							<time>{added}</time>, last updated on <time>{updated}</time>
+						</span>
+					) : (
+						<span>{added && <time>{added}</time>}</span>
+					)
 				}
 				<Tags tags={tags} />
 				<hr />
